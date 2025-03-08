@@ -1,0 +1,25 @@
+services:
+    core:
+        image: "ghcr.io/thomasonzhou/ros-full"
+        build:
+            dockerfile: "./images/core.dockerfile"
+        # command: ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+        tty: true
+        entrypoint: /ros_entrypoint.sh
+        stdin_open: true
+        command: bash
+
+        volumes:
+            - $HOME/ros2_ws:/home/ros2_ws
+        ports:
+            - 8765:8765 # foxglove
+        environment:
+            - DISPLAY=novnc:0.0
+    novnc:
+        image: theasp/novnc:latest
+        environment:
+            - DISPLAY_WIDTH=3000
+            - DISPLAY_HEIGHT=1800
+            - RUN_XTERM=no
+        ports:
+            - 8080:8080
