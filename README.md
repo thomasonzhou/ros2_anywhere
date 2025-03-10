@@ -22,3 +22,12 @@ rviz2
 
 TODO:
 - [] add ros2 source to .bashrc
+
+# Credits
+ 
+Thanks to [Kai Ma](https://k78ma.github.io/quartz/Robotics/noVNC) for showing this to me.
+
+Additional Links:
+
+- [ros.org - Using noVNC](https://wiki.ros.org/docker/Tutorials/GUI#Using_noVNC)
+- [ROS2 with docker](https://divyanshu-raj.medium.com/ros-2-with-docker-part-1-9060f3095811)
