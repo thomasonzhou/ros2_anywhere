@@ -10,3 +10,5 @@ RUN apt-get install -y git wget python3-pip vim \
 
 RUN mkdir -p /root/ros2_ws
 WORKDIR /root/ros2_ws
+
+RUN echo "source /opt/ros/jazzy/setup.bash" >> /root/.bashrc
